@@ -8,7 +8,7 @@ int div_by_16(int n){
 
 int div_by_32(int n){
 	// bias is 31, and in hex it's 0x1F
-	int bias = (n >> 31) & 0x1F;
+	int bias = (n >> 31) & 0x1F;   // we could write (n >> 31) & 31, so with bias in decimal version
 	return (n + bias) >> 5;
 }
 
@@ -16,7 +16,7 @@ int div_by_32(int n){
 
 int div_by_128(int n){
 	//2^k - 1 is equal to 127, so 127 in hex is 0x7F
-	int bias = (n >> 31) & 0x7F;
+	int bias = (n >> 31) & 0x7F;    //we could write (n >> 31) & 127, so with bias in decimal version
 	return (n + bias) >> 7;
 }
 
