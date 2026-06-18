@@ -3,8 +3,7 @@
 #include <stdio.h>
 
 unsigned int last_byte_cat_to_first_bytes(unsigned int x, unsigned int y){
-    x = 0x89ABCDEF;
-    y = 0x765432B0;
+    
     unsigned char *px = (unsigned char *)&x;
     unsigned char *py = (unsigned char *)&y;
     unsigned int z = 0;
